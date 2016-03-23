@@ -1,5 +1,5 @@
-import Botkit from 'botkit'
-import fetch from 'node-fetch'
+var Botkit = require('botkit')
+var fetch = require('node-fetch')
 
 if (!process.env.token) {
   console.log('Error: Specify token in environment');
@@ -33,11 +33,17 @@ bot.startRTM( (err, bot, payload) => {
 
 controller.hears(['taps?'], ['direct_message','direct_mention','mention','ambient'], (bot, message) => {
 
-  const { coach, taps } = config;
-
-  fetch(`https://api.forecast.io/forecast/${process.env.api}/${coach.lat},${coach.lng}`)
+  fetch(`https://api.forecast.io/forecast/${process.env.api}/${config.coach.lat},${config.coach.lng}`)
   	.then( res => res.json())
   	.then( json => json.currently.cloudCover)
-    .then( cloudCover => bot.reply(message, cloudCover < 0.5 ? taps.aff : taps.oan) )
+    .then( cloudCover => bot.reply(message, cloudCover < 0.5 ? config.taps.aff : config.taps.oan) )
+
+});
+
+controller.hears(['frontier'], ['direct_message','direct_mention','mention','ambient'], (bot, message) => {
+
+  // TODO - convo
+
+  bot.reply(message, 'Want to know whether you can take ya tap aff?')
 
 });

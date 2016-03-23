@@ -4,7 +4,8 @@
   "description": "taps aff!",
   "main": "bot.js",
   "scripts": {
-    "start": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec babel-node bot.js"
+    "start": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec node bot.js",
+    "deploy": "git push openshift"
   },
   "repository": {
     "type": "git",

@@ -16,5 +16,5 @@ npm start
 ## Deploy bot
 
 ```
-?
+npm run deploy
 ```
