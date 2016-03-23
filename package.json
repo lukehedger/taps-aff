@@ -1,0 +1,28 @@
+{
+  "name": "taps-aff",
+  "version": "1.0.0",
+  "description": "taps aff!",
+  "main": "bot.js",
+  "scripts": {
+    "start": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec babel-node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukehedger/taps-aff.git"
+  },
+  "keywords": [
+    "taps",
+    "aff",
+    "bot"
+  ],
+  "author": "Luke Hedger <luke.hedger@gmail.com> (http://www.level-out.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukehedger/taps-aff/issues"
+  },
+  "homepage": "https://github.com/lukehedger/taps-aff#readme",
+  "dependencies": {
+    "botkit": "0.0.12",
+    "node-fetch": "^1.4.1"
+  }
+}
