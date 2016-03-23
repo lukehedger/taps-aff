@@ -5,8 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
-    "develop": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec node bot.js",
-    "deploy": "git push openshift"
+    "develop": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec node bot.js"
   },
   "repository": {
     "type": "git",

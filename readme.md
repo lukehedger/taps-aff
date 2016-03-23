@@ -15,6 +15,4 @@ npm run develop
 
 ## Deploy bot
 
-```
-npm run deploy
-```
+Just `git push` and Travis will deploy to OpenShift.
