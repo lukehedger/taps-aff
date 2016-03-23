@@ -1,10 +1,13 @@
 var Botkit = require('botkit')
 var fetch = require('node-fetch')
+var Random = require('random-js')
 
 if (!process.env.token) {
   console.log('Error: Specify token in environment');
   process.exit(1);
 }
+
+var random = Random();
 
 const config = {
   coach: {
@@ -26,11 +29,10 @@ const config = {
 function generateBotReply (config) {
   var reply = config.message + ' ';
   var emojis = config.emojis;
-  var emojiCount = 3 + Math.floor(11 * Math.random());
+  var emojiCount = random.integer(3, 16);
 
   for (var i = 0; i < emojiCount; i++) {
-    var emojiIndex = Math.floor(emojis.length * Math.random());
-    var emoji = emojis[emojiIndex];
+    var emoji = random.pick(emojis)
 
     reply += `:${emoji}:`;
   }

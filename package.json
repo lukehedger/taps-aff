@@ -25,6 +25,7 @@
   "dependencies": {
     "botkit": "0.0.12",
     "express": "^4.13.4",
-    "node-fetch": "^1.4.1"
+    "node-fetch": "^1.4.1",
+    "random-js": "^1.0.8"
   }
 }
