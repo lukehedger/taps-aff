@@ -12,9 +12,30 @@ const config = {
     lng: -0.130254
   },
   taps: {
-    aff: 'aff! :beers:',
-    oan: 'oan :sob:'
+    aff: {
+      message: 'aff!',
+      emojis: ['beers', 'matman', 'sunny', 'russia']
+    },
+    oan: {
+      message: 'oan',
+      emojis: ['sob', 'rage1']
+    }
   }
+}
+
+function generateBotReply (config) {
+  var reply = config.message + ' ';
+  var emojis = config.emojis;
+  var emojiCount = 3 + Math.floor(11 * Math.random());
+
+  for (var i = 0; i < emojiCount; i++) {
+    var emojiIndex = Math.floor(emojis.length * Math.random());
+    var emoji = emojis[emojiIndex];
+
+    reply += `:${emoji}:`;
+  }
+
+  return reply;
 }
 
 const controller = Botkit.slackbot({
@@ -34,9 +55,14 @@ bot.startRTM( (err, bot, payload) => {
 controller.hears(['taps?'], ['direct_message','direct_mention','mention','ambient'], (bot, message) => {
 
   fetch(`https://api.forecast.io/forecast/${process.env.api}/${config.coach.lat},${config.coach.lng}`)
-  	.then( res => res.json())
-  	.then( json => json.currently.cloudCover)
-    .then( cloudCover => bot.reply(message, cloudCover < 0.5 ? config.taps.aff : config.taps.oan) )
+    .then(res => res.json())
+    .then(json => json.currently.cloudCover)
+    .then(cloudCover => {
+      const tapsConfig = cloudCover < 0.5 ? config.taps.aff : config.taps.oan;
+      const botReply = generateBotReply(tapsConfig);
+
+      bot.reply(message, botReply)
+    })
 
 });
 
