@@ -4,7 +4,7 @@
   "description": "taps aff!",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",
+    "start": "node index.js",
     "develop": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec node bot.js"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/lukehedger/taps-aff#readme",
   "dependencies": {
     "botkit": "0.0.12",
+    "express": "^4.13.4",
     "node-fetch": "^1.4.1"
   }
 }
