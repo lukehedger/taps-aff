@@ -1,0 +1,9 @@
+deploy:
+  provider: openshift
+  user: luke.hedger@gmail.com
+  password:
+    secure: rkdyS+5AxSGgoRBsHqdsaEmKe/a0EuM11WdD6IXsV0Zho0cKk8zvHMxiD1VzdSXMPR2i/G4HY4TFH1swNPYSmimE7ovtwdCHfphju6ddQfA8JYxm11OIEBAdqgWvQlGPYWO8b097vUysaBwVmuVxuggKCX20QpDptnS17oeZHli0baehEkO8sDTjPbRLTolLvtpHIlmEDwQQiaOy+FYoSM4WGTac621/amOQfI1aU80Zxj129hPWinjfL9qjxDrxLrerGr0cYRdSbtXuQ1VPNQlG05JTFHcRsKN6xBfir+0jI8v02gT14p9vaFhSh86w6sUgIM3DNjv+CyVVfJJNG1dFGwQq1l90EbJ25+hcD9cq9GZJx2FD4emcOqTXmq01kUW35p3+hzU8IzHDSFNqEnPZ2UA10wbs5nug95ARAvN2UiShGjIoGf3+SrC0pWmdW1VdGswFwj7DdLEytrKEf3V6P+pJI52tI5wUz77hUC68YeWKWqrBUP56UZlM0UE7To81pBB9GRSBOILVHyq4At5y0sWncaNsJYxDNXd26zJDLr4ZnD7anS8RDYpOWTIA1FmmWpBt6xkBv8iLB5jJFpmJqZs8/xHzAo/D7J4G5nDR1VpMybundLJL7meHNEzVwp6Jt6GXJwxVnXzQDCSDD6mgX5jzEIU4KBgRw7fdf9k=
+  app: tapsbot
+  domain: http://tapsbot-levelout.rhcloud.com/
+  on:
+    repo: lukehedger/taps-aff
