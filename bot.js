@@ -40,10 +40,17 @@ controller.hears(['taps?'], ['direct_message','direct_mention','mention','ambien
 
 });
 
-controller.hears(['frontier'], ['direct_message','direct_mention','mention','ambient'], (bot, message) => {
+controller.hears(['frontier'], ['ambient'], (bot, message) => {
 
-  // TODO - convo
-
-  bot.reply(message, 'Want to know whether you can take ya tap aff?')
+  bot.startConversation(message, askWhether);
 
 });
+
+askWhether = (response, convo) => {
+
+  convo.ask('Want to know whether you can take ya tap aff?', (response, convo) => {
+    convo.say('Bloody well type `taps?` then');
+    convo.next();
+  });
+
+}
