@@ -10,7 +10,7 @@ npm i
 ## Local bot
 
 ```
-npm start
+npm run develop
 ```
 
 ## Deploy bot
