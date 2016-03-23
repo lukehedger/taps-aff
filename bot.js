@@ -18,7 +18,7 @@ const config = {
     },
     oan: {
       message: 'oan',
-      emojis: ['sob', 'rage1']
+      emojis: ['sob', 'rage1', 'china']
     }
   }
 }
