@@ -7,6 +7,7 @@ deploy:
   domain: http://tapsbot-levelout.rhcloud.com/
   on:
     repo: lukehedger/taps-aff
-  language: node_js
-    node_js:
-      - 5.8.0
+
+language: node_js
+node_js:
+  - "5.8.0"
