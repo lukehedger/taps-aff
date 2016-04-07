@@ -1,12 +1,8 @@
 const bot = require('./bot');
-const http = require('http');
+const app = require('express')();
 
-const hostname = '127.0.0.1';
-const port = 1337;
-
-http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Taps Aff!');
-}).listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.get('/', (req, res) => {
+    res.send('Taps Aff!');
 });
+
+app.listen(1337);
