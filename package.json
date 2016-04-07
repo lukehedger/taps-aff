@@ -2,10 +2,11 @@
   "name": "taps-aff",
   "version": "1.0.0",
   "description": "taps aff!",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "develop": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec node bot.js"
+    "start": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a node index.js",
+    "develop": "token=xoxb-28926174481-PwmWhj12sk5ONyvVHE9BjQTs api=74cc47055f6239952a1080aafcaca91a nodemon --exec node bot.js",
+    "deploy": "now"
   },
   "repository": {
     "type": "git",

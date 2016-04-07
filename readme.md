@@ -3,7 +3,7 @@
 ## Setup bot
 
 ```
-npm i -g nodemon
+npm i -g nodemon now
 npm i
 ```
 
@@ -15,4 +15,7 @@ npm run develop
 
 ## Deploy bot
 
-Just `git push` and Travis will deploy to OpenShift.
+```
+now --login
+npm run deploy
+```
